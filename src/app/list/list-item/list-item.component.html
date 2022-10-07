@@ -1,0 +1,30 @@
+<div class="list-item" [style.opacity]="status === 'completed' ? 0.5 : 1">
+  <label class="label">
+    <input
+      type="checkbox"
+      [checked]="checked"
+      (change)="changeStatus($event)"
+    />
+    {{ title }}
+  </label>
+
+  <div class="status">
+    <span
+      class="text"
+      [class.text--pending]="status === 'pending'"
+      [class.text--progress]="status === 'progress'"
+      [class.text--completed]="status === 'completed'"
+      [class.text--cancelled]="status==='cancelled'"
+      >{{ getStatusName(status) }}
+    </span>
+  </div>
+  <div class="inner">
+    <div
+      class="circle"
+      [class.circle--minor]="inner === 'minor'"
+      [class.circle--normal]="inner === 'normal'"
+      [class.circle--critical]="inner === 'critical'"
+    ></div>
+    <span class="text">{{ getInnerName(inner) }}</span>
+  </div>
+</div>

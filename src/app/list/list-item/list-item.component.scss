@@ -1,0 +1,82 @@
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 17px;
+  margin: 0 0 28px;
+}
+
+.status {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text {
+  border-radius: 8.5px;
+  font-size: 14px;
+  height: 18px;
+  padding: 0 18px;
+
+  &--pending {
+    background: rgba(242, 153, 74, 0.2);
+    color: #f2994a;
+  }
+
+  &--progress {
+    background: rgba(86, 204, 242, 0.2);
+    color: #56ccf2;
+  }
+
+  &--completed {
+    background: rgba(39, 174, 96, 0.2);
+    color: #27ae60;
+  }
+  &--cancelled {
+    background: rgba(235, 87, 87, 0.2);
+    color: #eb5757;
+  }
+}
+
+.inner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: #5c626d;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+
+  .circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 3px solid;
+    margin-right: 5px;
+
+    &--minor {
+      border-color: green;
+    }
+
+    &--normal {
+      border-color: yellow;
+    }
+
+    &--critical {
+      border-color: red;
+    }
+  }
+}
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 3px solid green;
+  margin-right: 5px;
+}
+
+.label {
+  flex: 2;
+}

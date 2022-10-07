@@ -1,10 +1,9 @@
-<div class="list-item">
-  <label for="checkbox1">
-    <input type="checkbox" id="checkbox1" name="checkbox1" />
-    Evaluate the addition and deletion of user IDs.
-  </label>
-
-  <div class="status status--completed">
-    <span class="text">Pending</span>
-  </div>
-</div>
+<app-list-item
+  class="list-item"
+  *ngFor="let task of tasks"
+  [title]="task.title"
+  [status]="task.status"
+  [inner]="task.inner"
+  [checked]="task.checked"
+  (change)="changeStatus(task)"
+></app-list-item>

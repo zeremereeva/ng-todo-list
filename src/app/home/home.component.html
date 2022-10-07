@@ -1,0 +1,10 @@
+<app-list
+  class="list-1"
+  [tasks]="tasks"
+  (change)="changeStatus($event)"
+></app-list>
+
+<ng-container *ngIf="completedTasks.length > 0">
+  <h2>Completed Tasks</h2>
+  <app-list class="list-2" [tasks]="completedTasks"></app-list>
+</ng-container>
